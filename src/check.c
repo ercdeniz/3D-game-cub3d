@@ -6,7 +6,7 @@
 /*   By: ercdeniz <ercdeniz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/21 20:41:57 by ercdeniz          #+#    #+#             */
-/*   Updated: 2024/02/23 18:24:01 by ercdeniz         ###   ########.fr       */
+/*   Updated: 2024/02/24 15:16:11 by ercdeniz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,6 +74,7 @@ static int	copy_map(t_game *game, int y, int x)
 					game->map.nswe_size[3]++;
 				game->map.location[0] = y;
 				game->map.location[1] = x;
+				game->map.player = game->map.area[y][x];
 			}
 		}
 	}

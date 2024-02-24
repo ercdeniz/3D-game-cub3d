@@ -6,7 +6,7 @@
 /*   By: ercdeniz <ercdeniz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/17 12:12:47 by ercdeniz          #+#    #+#             */
-/*   Updated: 2024/02/23 18:23:50 by ercdeniz         ###   ########.fr       */
+/*   Updated: 2024/02/24 15:13:59 by ercdeniz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,6 +92,7 @@ typedef struct s_map
 	char	*line;
 	char	*map_line;
 	char	*info_line;
+	char	player;
 }			t_map;
 
 typedef struct s_game

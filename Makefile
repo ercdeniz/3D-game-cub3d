@@ -15,7 +15,8 @@ SRC			=	src/main			\
 				src/check			\
 				src/exit			\
 				src/extra			\
-				src/init			\
+				src/map_init		\
+				src/ray_init		\
 				src/mlx_utils		\
 				src/move			\
 				src/ray_manager		\

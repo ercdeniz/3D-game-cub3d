@@ -1,17 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   init.c                                             :+:      :+:    :+:   */
+/*   map_init.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ercdeniz <ercdeniz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/06 14:12:08 by ercdeniz          #+#    #+#             */
-/*   Updated: 2024/02/23 17:43:09 by ercdeniz         ###   ########.fr       */
+/*   Updated: 2024/02/24 15:31:12 by ercdeniz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/cub3d.h"
-#include <stdlib.h>
 
 static void	error_init(t_error *error)
 {
@@ -43,22 +42,4 @@ void	init_manager(t_game *game)
 {
 	error_init(&game->err);
 	map_init(&game->map);
-}
-
-void	ray_init(t_game *game)
-{
-	game->pos[0] = game->map.location[1] + 0.5;
-	game->pos[1] = game->map.location[0] + 0.5;
-	game->dir[0] = 0;
-	game->dir[1] = -1;
-	game->plane[0] = 0.66;
-	game->plane[1] = 0;
-	game->speed = 0.08;
-	game->rspeed = 0.04;
-	game->w = false;
-	game->a = false;
-	game->s = false;
-	game->d = false;
-	game->left = false;
-	game->right = false;
 }
