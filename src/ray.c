@@ -6,7 +6,7 @@
 /*   By: ercdeniz <ercdeniz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/14 12:01:43 by ercdeniz          #+#    #+#             */
-/*   Updated: 2024/02/25 14:33:52 by ercdeniz         ###   ########.fr       */
+/*   Updated: 2024/02/25 17:51:41 by ercdeniz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,12 +85,12 @@ void	calculate_wall_height(t_game *game)
 	game->wall_x = game->pos[!game->side] + game->perp_wall_dist
 		* game->raydir[!game->side];
 	game->wall_x = game->wall_x - (int)game->wall_x;
-	game->tex[0] = (int)(game->wall_x * (double)TEXWIDTH);
+	game->tex[0] = (int)(game->wall_x * TEXWIDTH);
 	if (game->side == 0 && game->raydir[0] < 0)
 		game->tex[0] = TEXWIDTH - game->tex[0] - 1;
 	if (game->side == 1 && game->raydir[1] > 0)
 		game->tex[0] = TEXWIDTH - game->tex[0] - 1;
-	game->step_size = 1.0 * TEXHEIGHT / game->line_h;
+	game->step_size = (double)TEXHEIGHT / game->line_h;
 	game->tex_pos = (game->draw_start - HEIGHT / 2 + game->line_h / 2)
 		* game->step_size;
 }

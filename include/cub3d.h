@@ -6,7 +6,7 @@
 /*   By: ercdeniz <ercdeniz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/17 12:12:47 by ercdeniz          #+#    #+#             */
-/*   Updated: 2024/02/25 16:07:39 by ercdeniz         ###   ########.fr       */
+/*   Updated: 2024/02/25 17:50:05 by ercdeniz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,6 @@ typedef struct s_image
 {
 	void	*image;
 	int		*addr;
-	int		number;
 }			t_image;
 
 typedef struct s_mlx

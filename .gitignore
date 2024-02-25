@@ -5,3 +5,4 @@ cub3d
 .vscode
 *.o
 *.pdf
+*.a
