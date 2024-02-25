@@ -3,3 +3,5 @@ cub3d
 .objFiles
 .DS_Store
 .vscode
+*.o
+*.pdf

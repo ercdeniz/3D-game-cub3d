@@ -6,7 +6,7 @@
 /*   By: ercdeniz <ercdeniz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/17 12:12:47 by ercdeniz          #+#    #+#             */
-/*   Updated: 2024/02/24 15:13:59 by ercdeniz         ###   ########.fr       */
+/*   Updated: 2024/02/25 16:07:39 by ercdeniz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -168,7 +168,7 @@ void		map_check(t_game *game);
 
 // INIT.C
 void		init_manager(t_game *game);
-void		ray_init(t_game *game);
+void		ray_and_mlx_init(t_game *game);
 
 // EXTRA.C
 int			set_rgb(t_game *game, int k, int flag);

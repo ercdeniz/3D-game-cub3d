@@ -17,7 +17,6 @@ SRC =	./split.c			\
 		./strcat.c			\
 		./atoi.c			\
 		./isdigit.c			\
-		./calloc.c			\
 		./get_next_line.c
 
 OBJ	= $(addprefix $(OBJDIR)/, $(SRC:.c=.o))

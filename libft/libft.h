@@ -6,7 +6,7 @@
 /*   By: ercdeniz <ercdeniz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 10:53:29 by ercdeniz          #+#    #+#             */
-/*   Updated: 2024/02/23 14:37:07 by ercdeniz         ###   ########.fr       */
+/*   Updated: 2024/02/25 15:02:18 by ercdeniz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,6 @@ char	*ft_trim(char const *str, char const *set);
 char	*ft_strcat(char *s1, const char *s2);
 int		ft_atoi(const char *str);
 int		ft_isdigit(int c);
-void	*ft_calloc(size_t count, size_t size);
 // GET_NEXT_LINE
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 42

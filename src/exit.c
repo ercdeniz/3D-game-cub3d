@@ -6,7 +6,7 @@
 /*   By: ercdeniz <ercdeniz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/19 12:06:12 by ercdeniz          #+#    #+#             */
-/*   Updated: 2024/02/23 18:27:02 by ercdeniz         ###   ########.fr       */
+/*   Updated: 2024/02/25 15:40:30 by ercdeniz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,6 @@ static void	ft_destroy(t_game *game, int status)
 		mlx_destroy_image(game->mlx.ptr, game->image->image);
 	if (game->mlx.win)
 		mlx_destroy_window(game->mlx.ptr, game->mlx.win);
-	free(game);
 	exit(status);
 }
 

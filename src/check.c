@@ -6,7 +6,7 @@
 /*   By: ercdeniz <ercdeniz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/21 20:41:57 by ercdeniz          #+#    #+#             */
-/*   Updated: 2024/02/24 15:16:11 by ercdeniz         ###   ########.fr       */
+/*   Updated: 2024/02/25 15:48:29 by ercdeniz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,6 +78,8 @@ static int	copy_map(t_game *game, int y, int x)
 			}
 		}
 	}
+	if (game->map.location[0] == 0 || game->map.location[1] == 0)
+		return (printf(E, RED, game->err.inv_plyr, RES), ext(game, 1, 1), 1);
 	return (0);
 }
 
