@@ -6,12 +6,12 @@
 /*   By: ercdeniz <ercdeniz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/16 15:59:25 by ercdeniz          #+#    #+#             */
-/*   Updated: 2024/02/25 15:37:32 by ercdeniz         ###   ########.fr       */
+/*   Updated: 2024/02/26 12:15:03 by ercdeniz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <malloc/_malloc.h>
 #include <stdio.h>
+#include <malloc/_malloc.h>
 #include "../include/cub3d.h"
 #include "../minilibx/mlx.h"
 

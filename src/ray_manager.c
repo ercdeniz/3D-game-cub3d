@@ -6,7 +6,7 @@
 /*   By: ercdeniz <ercdeniz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/18 15:29:08 by ercdeniz          #+#    #+#             */
-/*   Updated: 2024/02/25 15:34:17 by ercdeniz         ###   ########.fr       */
+/*   Updated: 2024/02/26 14:45:46 by ercdeniz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,9 @@ static void	raycast(t_game *g)
 	x = -1;
 	while (++x < WIDTH)
 	{
-		calculate_ray(g, x);
+		calculate_ray_direction_and_distances(g, x);
 		calculate_step(g);
-		calculate_hit_distance(g);
+		calculate_collision_distance(g);
 		calculate_wall_height(g);
 		render_column(g, x, -1);
 	}

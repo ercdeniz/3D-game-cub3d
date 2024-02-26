@@ -6,15 +6,13 @@
 /*   By: ercdeniz <ercdeniz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 17:19:31 by ercdeniz          #+#    #+#             */
-/*   Updated: 2024/02/25 16:07:53 by ercdeniz         ###   ########.fr       */
+/*   Updated: 2024/02/26 12:14:35 by ercdeniz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include <stdio.h>
 #include "../include/cub3d.h"
 #include "../minilibx/mlx.h"
-#include "../libft/libft.h"
 
 int	main(int ac, char **av)
 {

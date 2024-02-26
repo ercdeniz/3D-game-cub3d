@@ -6,7 +6,7 @@
 /*   By: ercdeniz <ercdeniz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/17 12:12:47 by ercdeniz          #+#    #+#             */
-/*   Updated: 2024/02/25 17:50:05 by ercdeniz         ###   ########.fr       */
+/*   Updated: 2024/02/26 14:45:46 by ercdeniz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@
 # include <stdbool.h>
 
 // DIMENSIONS
-# define WIDTH 800
-# define HEIGHT 600
+# define WIDTH 720
+# define HEIGHT 550
 # define TEXWIDTH 64
 # define TEXHEIGHT 64
 
@@ -139,9 +139,9 @@ void		movement(t_game *game);
 void		rotate(t_game *g, double dir, double plane);
 
 // RAY.C
-void		calculate_ray(t_game *game, int x);
+void		calculate_ray_direction_and_distances(t_game *game, int x);
 void		calculate_step(t_game *game);
-void		calculate_hit_distance(t_game *game);
+void		calculate_collision_distance(t_game *game);
 void		calculate_wall_height(t_game *game);
 void		render_column(t_game *game, int x, int y);
 
