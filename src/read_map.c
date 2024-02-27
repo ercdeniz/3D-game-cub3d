@@ -6,7 +6,7 @@
 /*   By: ercdeniz <ercdeniz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/06 14:31:21 by ercdeniz          #+#    #+#             */
-/*   Updated: 2024/02/25 15:55:16 by ercdeniz         ###   ########.fr       */
+/*   Updated: 2024/02/27 12:04:30 by ercdeniz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,7 +100,6 @@ static void	map_info_pars(t_game *game, char **temp, int i, int j)
 static void	cut_map(t_game *game)
 {
 	int		start;
-	char	*temp;
 
 	game->map.max = ft_strlen(game->map.line) - 1;
 	start = game->map.max;
@@ -112,11 +111,7 @@ static void	cut_map(t_game *game)
 	game->map.info_line = ft_substr(game->map.line, 0, start);
 	if (!game->map.info_line || !game->map.map_line)
 		return (printf(E, RED, game->err.alloc, RES), ext(game, 1, 1));
-	temp = ft_trim(game->map.info_line, " \t\v\f\r\n\"\'");
-	if (!temp)
-		return (printf(E, RED, game->err.alloc, RES), ext(game, 1, 1));
-	game->map.info = ft_split(temp, '\n');
-	free(temp);
+	game->map.info = ft_split(game->map.info_line, '\n');
 	map_info_pars(game, game->map.info, -1, 0);
 }
 
@@ -126,7 +121,7 @@ void	map_read_and_parsing(t_game *game)
 	char	*line;
 
 	temp = NULL;
-	while (1)
+	while (true)
 	{
 		line = get_next_line(game->map.fd);
 		if (!line)

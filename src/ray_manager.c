@@ -6,7 +6,7 @@
 /*   By: ercdeniz <ercdeniz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/18 15:29:08 by ercdeniz          #+#    #+#             */
-/*   Updated: 2024/02/26 14:45:46 by ercdeniz         ###   ########.fr       */
+/*   Updated: 2024/02/27 13:56:54 by ercdeniz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ static void	raycast(t_game *g)
 		calculate_ray_direction_and_distances(g, x);
 		calculate_step(g);
 		calculate_collision_distance(g);
-		calculate_wall_height(g);
+		calculate_wall_properties(g);
 		render_column(g, x, -1);
 	}
 	mlx_put_image_to_window(g->mlx.ptr, g->mlx.win, g->image->image, 0, 0);

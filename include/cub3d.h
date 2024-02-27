@@ -6,7 +6,7 @@
 /*   By: ercdeniz <ercdeniz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/17 12:12:47 by ercdeniz          #+#    #+#             */
-/*   Updated: 2024/02/26 14:45:46 by ercdeniz         ###   ########.fr       */
+/*   Updated: 2024/02/27 13:56:54 by ercdeniz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -142,7 +142,7 @@ void		rotate(t_game *g, double dir, double plane);
 void		calculate_ray_direction_and_distances(t_game *game, int x);
 void		calculate_step(t_game *game);
 void		calculate_collision_distance(t_game *game);
-void		calculate_wall_height(t_game *game);
+void		calculate_wall_properties(t_game *game);
 void		render_column(t_game *game, int x, int y);
 
 // RAY_MANAGER.C
