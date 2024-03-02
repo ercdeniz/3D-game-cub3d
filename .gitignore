@@ -1,8 +1,9 @@
-cub3d.dSYM
-cub3d
+*.dSYM
 .objFiles
 .DS_Store
 .vscode
 *.o
 *.pdf
 *.a
+*.exe
+*.out
