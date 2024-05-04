@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ercdeniz <ercdeniz@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ercdeniz <ercdeniz@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/21 20:41:57 by ercdeniz          #+#    #+#             */
-/*   Updated: 2024/02/25 15:48:29 by ercdeniz         ###   ########.fr       */
+/*   Updated: 2024/05/04 14:34:47 by ercdeniz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,10 +99,8 @@ void	map_check(t_game *game)
 			return (printf(E, RED, game->err.inv_char, RES),
 				ext(game, 1, 1));
 	}
-	free(game->map.line);
-	game->map.line = replace_tabs_with_spaces(game->map.map_line, 0, 0, 0);
-	game->map.area = ft_split(game->map.line, '\n');
-	game->map.temp_area = ft_split(game->map.line, '\n');
+	game->map.area = ft_split(game->map.map_line, '\n');
+	game->map.temp_area = ft_split(game->map.map_line, '\n');
 	if (!game->map.area || !game->map.temp_area)
 		return (printf(E, RED, game->err.alloc, RES), ext(game, 1, 1));
 	copy_map(game, -1, -1);

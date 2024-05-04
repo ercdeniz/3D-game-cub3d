@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   cub3d.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ercdeniz <ercdeniz@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ercdeniz <ercdeniz@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/17 12:12:47 by ercdeniz          #+#    #+#             */
-/*   Updated: 2024/02/27 13:56:54 by ercdeniz         ###   ########.fr       */
+/*   Updated: 2024/05/04 14:49:43 by ercdeniz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -154,7 +154,8 @@ void		ft_mlx(t_game *game, int a, int b);
 
 // UTILS.C
 void		ext(t_game *game, int status, bool destroy);
-char		*replace_tabs_with_spaces(const char *str, int tab, int i, int j);
+char		*replace_tabs_with_spaces(const char *str, t_game *game,
+				int i, int j);
 void		rgb_and_path_check(t_game *game);
 void		is_cub(char *file_name, t_game *game);
 int			cub_atoi(t_game *game, const char *str);

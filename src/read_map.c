@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   read_map.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ercdeniz <ercdeniz@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ercdeniz <ercdeniz@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/06 14:31:21 by ercdeniz          #+#    #+#             */
-/*   Updated: 2024/02/27 12:04:30 by ercdeniz         ###   ########.fr       */
+/*   Updated: 2024/05/04 14:47:55 by ercdeniz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -136,7 +136,7 @@ void	map_read_and_parsing(t_game *game)
 	temp = ft_trim(game->map.line, " \t\v\f\r\n");
 	if (!temp)
 		return (printf(E, RED, game->err.alloc, RES), ext(game, 1, 1));
-	line = replace_tabs_with_spaces(temp, 0, 0, 0);
+	line = replace_tabs_with_spaces(temp, game, -1, 0);
 	free(game->map.line);
 	free(temp);
 	game->map.line = line;

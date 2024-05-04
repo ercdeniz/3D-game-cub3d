@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ercdeniz <ercdeniz@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ercdeniz <ercdeniz@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/17 12:16:42 by ercdeniz          #+#    #+#             */
-/*   Updated: 2024/02/23 18:24:01 by ercdeniz         ###   ########.fr       */
+/*   Updated: 2024/05/04 14:51:16 by ercdeniz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,17 +16,18 @@
 #include "../include/cub3d.h"
 #include "../libft/libft.h"
 
-char	*replace_tabs_with_spaces(const char *str, int tab, int i, int j)
+char	*replace_tabs_with_spaces(const char *str, t_game *game, int i, int j)
 {
+	int		tab_count;
 	char	*new_str;
 
-	while (str[i] != '\0')
-	{
+	tab_count = 0;
+	while (str[++i] != '\0')
 		if (str[i] == '\t')
-			tab++;
-		i++;
-	}
-	new_str = malloc(sizeof(char) * (i + (tab * 3) + 1));
+			tab_count++;
+	new_str = malloc(sizeof(char) * (i + (tab_count * 3) + 1));
+	if (!new_str)
+		return (printf(E, RED, game->err.alloc, RES), ext(game, 0, 1), NULL);
 	i = -1;
 	while (str[++i] != '\0')
 	{
@@ -40,8 +41,7 @@ char	*replace_tabs_with_spaces(const char *str, int tab, int i, int j)
 		else
 			new_str[j++] = str[i];
 	}
-	new_str[j] = '\0';
-	return (new_str);
+	return (new_str[j] = '\0', new_str);
 }
 
 void	rgb_and_path_check(t_game *game)
